@@ -1,0 +1,40 @@
+# Runtime data
+pids
+*.pid
+*.pid.lock
+pip-*.*
+# Distribution / packaging
+/bin
+/env
+/package
+**/env/
+**/ENV/
+**/build/
+**/package/
+**/lib/
+
+#compose things
+local*.yml
+local*.yaml
+
+# Project things
+.project
+requirements.in
+
+# nodejs things
+**/node_modules
+.env
+.eslintcache
+.grunt
+.node_repl_history
+.npm
+
+
+# Other things
+*.vim
+*.out
+*.ipynb
+*.~
+*.gz
+*.zip
+
