@@ -7,7 +7,7 @@ LAMBDA_ROLE = arn:aws:iam::820269386197:role/gna-lambda-role
 
 # default commands
 install: virtual
-build: clean_package build_package_tmp copy_python remove_unused zip
+build: clean_package build_package_tmp copy_python remove_unused clean-pyc zip
 
 clean-pyc:
 	find -name '*.pyc' -delete
@@ -36,7 +36,6 @@ remove_unused:
 	rm -rf package/tmp/wheel*
 	rm -rf package/tmp/easy-install*
 	rm -rf package/tmp/setuptools*
-	clean-pyc
 
 zip:
 	cd package/tmp && zip -r ../$(PROJECT).zip .
